@@ -1,12 +1,8 @@
 //database connection file
 import mongoose, { mongo } from "mongoose";
 
-const URL = 'mongodb://localhost:27017/users'
-mongoose.connect(URL,{
-    useNewUrlParser: true,
-    useUnifiedTopology: true,     
-   
-})
+const URL = 'mongodb+srv://mrlazyguy33:PassworD9816979102@cluster0.p0edv.mongodb.net/users'
+mongoose.connect(URL)
 
 const DB =mongoose.connection
 DB.on('connected',()=>{
