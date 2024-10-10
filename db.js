@@ -1,7 +1,9 @@
 //database connection file
 import mongoose, { mongo } from "mongoose";
+import dotenv from 'dotenv'
+dotenv.config()
+const URL = process.env.DB_URL
 
-const URL = 'mongodb+srv://mrlazyguy33:PassworD9816979102@cluster0.p0edv.mongodb.net/users'
 mongoose.connect(URL)
 
 const DB =mongoose.connection
